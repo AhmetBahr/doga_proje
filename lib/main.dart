@@ -48,22 +48,4 @@ class MyApp extends StatelessWidget {
               });
         },
       );
-} 
-//Ahmet Bahar 
-//Github; @AhmetBahr
-
-//Sıray Tarım 
-//Github; @siraytarim
-
-
-/*theme: ThemeData.dark().copyWith(
-        appBarTheme: AppBarTheme(
-            shadowColor: Colors.blue.shade800,
-            elevation: 8,
-            systemOverlayStyle: SystemUiOverlayStyle.light,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-            backgroundColor: Colors.grey.shade800,
-            centerTitle: false,
-            titleTextStyle: TextStyle(color: Colors.lightBlueAccent)),
-      */
+}
