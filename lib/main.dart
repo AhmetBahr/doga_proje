@@ -45,8 +45,8 @@ class MyApp extends StatelessWidget {
                 "/SheetsApi": (context) => SheetsPage(),
                 "/Lists": (context) => kartliste(),
                 "/GoogleMap": (context) => DenemeMap(),
-                "/News1": (context) => News1(title: "Watter"),
-                "/News2": (context) => News2(title: "Watter"),
+                "/News1": (context) => News1(),
+                "/News2": (context) => News2(),
                 "/Lists": (context) => kartliste(),
                 "/AddPages": (context) => AddPages(),
                 "/NewsPage": (context) =>

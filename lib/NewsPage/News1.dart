@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 class News1 extends StatefulWidget {
-  const News1({Key? key, required String title}) : super(key: key);
-
   @override
   _DetailsState createState() => _DetailsState();
 }
