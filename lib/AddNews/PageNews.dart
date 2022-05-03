@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
+import 'news.form.widget.dart';
 
-import 'FormWidget.dart';
-import 'SheetApi.dart';
-
-class SheetsPage extends StatelessWidget {
+class PageNews extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
@@ -14,12 +12,8 @@ class SheetsPage extends StatelessWidget {
           alignment: Alignment.center,
           padding: EdgeInsets.all(32),
           child: SingleChildScrollView(
-            child: BarajFormWidget(
-              onSavedBaraj: (baraj) async {
-                final Count = await SheetsApi.getRowCount() + 1;
-                final newBaraj = baraj.copy(Count: Count);
-                await SheetsApi.insert([newBaraj.toJson()]);
-              },
+            child: NewsFormWidget(
+              onSavedHaberr: (haber) async {},
             ),
           ),
         ),

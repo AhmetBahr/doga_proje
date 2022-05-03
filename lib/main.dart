@@ -1,3 +1,4 @@
+import 'package:doga_proje/AddNews/news.form.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -23,6 +24,9 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+
+  get onSavedHaberr => null;
+
 //     "/SheetPage": (context) => SheetsPage();
   @override
   Widget build(BuildContext context) => ChangeNotifierProvider(
@@ -45,6 +49,8 @@ class MyApp extends StatelessWidget {
                 "/News2": (context) => News2(title: "Watter"),
                 "/Lists": (context) => kartliste(),
                 "/AddPages": (context) => AddPages(),
+                "/NewsPage": (context) =>
+                    NewsFormWidget(onSavedHaberr: onSavedHaberr)
               });
         },
       );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../NewsPage/AddNews.dart';
+//import '../NewsPage/AddNews/news.form.widget.dart';
+import '../AddNews/NewsForWidge.dart';
 import 'ListOrMaps.dart';
 import 'ProfilPage.dart';
 
@@ -50,7 +51,7 @@ class _MainPageState extends State<MainPage> {
           Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => HaberEkle(),
+                builder: (context) => NewsFormWidget(),
               ));
         },
       ),
