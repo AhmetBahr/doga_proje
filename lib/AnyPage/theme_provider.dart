@@ -21,5 +21,3 @@ class ThemeProvider extends ChangeNotifier {
   }
 }
 
-//Ahmet Bahar 
-//Github; @AhmetBahr

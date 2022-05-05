@@ -101,8 +101,3 @@ Widget Map(context) => Card(
         ],
       ),
     );
-//Ahmet Bahar 
-//Github; @AhmetBahr
-
-//Sıray Tarım 
-//Github; @siraytarim
