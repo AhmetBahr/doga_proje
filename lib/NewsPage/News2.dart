@@ -49,4 +49,5 @@ class _Details2State extends State<News2> {
     );
   }
 }
-  
+//Sıray Tarım 
+//Github; @siraytarim
