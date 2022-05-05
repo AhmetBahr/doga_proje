@@ -66,5 +66,3 @@ class SheetsApi {
     _userSheet!.values.map.appendRows(rowList);
   }
 }
-//Sıray Tarım 
-//Github; @siraytarim
