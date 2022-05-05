@@ -26,5 +26,3 @@ class ButtonWidget extends StatelessWidget {
         onPressed: onClicked,
       );
 }
-//Ahmet Bahar 
-//Github; @AhmetBahr

@@ -40,8 +40,6 @@ dependencies:
   path_provider: ^2.0.9
   mobx: ^2.0.7
 
-
-
 provider: ^4.3.2+3
 
 dev_dependencies:
