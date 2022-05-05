@@ -128,5 +128,3 @@ class _BarajFormWidgetState extends State<BarajFormWidget> {
         },
       );
 }
-//Sıray Tarım 
-//Github; @siraytarim

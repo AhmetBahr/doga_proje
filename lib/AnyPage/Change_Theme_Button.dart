@@ -17,5 +17,3 @@ class ChangeThemeButtonWidget extends StatelessWidget {
     );
   }
 }
-//Ahmet Bahar 
-//Github; @AhmetBahr
