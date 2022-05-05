@@ -4,9 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'AnyPage/SheetOrAdd.dart';
 import 'AnyPage/theme_provider.dart';
-import 'GoogleMaps/DenemeMap.dart';
-import 'GoogleMaps/ListMaker.dart';
-import 'GoogleMaps/Lists.dart';
+
 import 'GoogleSheet/SheetApi.dart';
 import 'GoogleSheet/SheetsPagess.dart';
 import 'Materyal/BottomNavigotorBar.dart';
@@ -43,11 +41,8 @@ class MyApp extends StatelessWidget {
               initialRoute: "/",
               routes: {
                 "/SheetsApi": (context) => SheetsPage(),
-                "/Lists": (context) => kartliste(),
-                "/GoogleMap": (context) => DenemeMap(),
                 "/News1": (context) => News1(),
                 "/News2": (context) => News2(),
-                "/Lists": (context) => kartliste(),
                 "/AddPages": (context) => AddPages(),
                 "/NewsPage": (context) =>
                     NewsFormWidget(onSavedHaberr: onSavedHaberr)
