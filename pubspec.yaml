@@ -39,7 +39,7 @@ dependencies:
   request_permission: ^2.1.4
   path_provider: ^2.0.9
   flutter_settings_screens: ^0.3.2-null-safety
-  
+
 provider: ^4.3.2+3
 
 dev_dependencies:

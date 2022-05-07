@@ -1,5 +1,5 @@
 import 'package:doga_proje/AddNews/news.form.widget.dart';
-import 'package:doga_proje/settingPage/settingspage.dart';
+import 'package:doga_proje/settingPage/Page/settingspage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_settings_screens/flutter_settings_screens.dart';
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
 
           return MaterialApp(
               title: 'Water_Wall',
-              home: SettingsPage(),
+              home: MyBottomBar(),
               themeMode: themeProvider.themeMode,
               theme: Mythemes.lightTheme,
               darkTheme: Mythemes.darkTheme,
@@ -46,7 +46,8 @@ class MyApp extends StatelessWidget {
                 "/News2": (context) => News2(),
                 "/AddPages": (context) => AddPages(),
                 "/NewsPage": (context) =>
-                    NewsFormWidget(onSavedHaberr: onSavedHaberr)
+                    NewsFormWidget(onSavedHaberr: onSavedHaberr),
+                "/settings": (context) => SettingsPage(),
               });
         },
       );

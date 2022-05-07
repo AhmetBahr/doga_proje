@@ -60,8 +60,11 @@ class Newprofile extends StatelessWidget {
                       Container(
                         height: 55,
                         width: double.infinity,
-                        child: RaisedButton(
-                          onPressed: () {}, // Ayarler sayfasına gidicek
+                        child: FlatButton(
+                          //HATA BURDA
+                          onPressed: () {
+                            Navigator.pushNamed(context, "/settings");
+                          },
                           color: Colors.black54,
                           child: Center(
                             child: Text(

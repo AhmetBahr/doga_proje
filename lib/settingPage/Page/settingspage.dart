@@ -2,6 +2,9 @@ import 'package:doga_proje/settingPage/widget/widgetPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_settings_screens/flutter_settings_screens.dart';
 
+import 'actountPage.dart';
+import 'notificationPage.dart';
+
 class SettingsPage extends StatelessWidget {
   const SettingsPage({Key? key}) : super(key: key);
 
@@ -15,6 +18,8 @@ class SettingsPage extends StatelessWidget {
           SettingsGroup(
             title: 'General',
             children: <Widget>[
+              ActountPage(),
+              NotificationsPage(),
               buildLogout(),
               buildDeleteActtion(),
             ],
