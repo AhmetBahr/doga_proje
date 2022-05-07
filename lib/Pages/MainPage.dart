@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-//import '../NewsPage/AddNews/news.form.widget.dart';
 import '../AddNews/NewsForWidge.dart';
 import 'ListOrMaps.dart';
 import 'ProfilPage.dart';
@@ -30,6 +29,7 @@ class _MainPageState extends State<MainPage> {
       ),
       body: ListView(
         children: [
+          Tags(),
           news1(context),
           news2(context),
           news3(),
@@ -59,6 +59,46 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
+
+Widget Tags() => Container(
+      margin: const EdgeInsets.only(bottom: 20),
+      height: 60,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: <Widget>[
+          Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: NetworkImage(
+                        "https://static.dw.com/image/16207642_401.jpg%22"),
+                    fit: BoxFit.cover),
+                color: Colors.black,
+                borderRadius: BorderRadius.all(Radius.circular(13.0))),
+            width: 160,
+          ),
+          Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: NetworkImage(
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ7fKmH1fTwDJ-zTCctnQz02DRIfznRryfDw&usqp=CAU%22"),
+                    fit: BoxFit.cover),
+                color: Colors.black,
+                borderRadius: BorderRadius.all(Radius.circular(16.0))),
+            width: 160,
+          ),
+          Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: NetworkImage(
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpsOcCdDegZ5kx1yoIESYtSn0BTUe507p9iQ&usqp=CAU%22"),
+                    fit: BoxFit.cover),
+                color: Colors.black,
+                borderRadius: BorderRadius.all(Radius.circular(16.0))),
+            width: 160,
+          ),
+        ],
+      ),
+    );
 
 Widget news1(context) => Card(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
