@@ -38,11 +38,7 @@ dependencies:
   app_settings: ^4.1.1
   request_permission: ^2.1.4
   path_provider: ^2.0.9
-<<<<<<< HEAD
-  mobx: ^2.0.7
-=======
   flutter_settings_screens: ^0.3.2-null-safety
->>>>>>> master
 
 provider: ^4.3.2+3
 
