@@ -9,7 +9,6 @@ class HeaderPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Column(
         children: [
-          builHeader(),
           const SizedBox(
             height: 32,
           ),
@@ -31,9 +30,3 @@ Widget buildDarkMode() {
     onChange: (_) {},
   );
 }
-
-Widget builHeader() => Center(
-      child: Text(
-        'Settings',
-      ),
-    );

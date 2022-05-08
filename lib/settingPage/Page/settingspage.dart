@@ -1,7 +1,9 @@
+import 'package:doga_proje/settingPage/Page/headerPage.dart';
 import 'package:doga_proje/settingPage/widget/widgetPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_settings_screens/flutter_settings_screens.dart';
 
+import '../../AnyPage/Change_Theme_Button.dart';
 import 'actountPage.dart';
 import 'notificationPage.dart';
 
@@ -11,6 +13,18 @@ class SettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+        centerTitle: true,
+        title: Text(
+          'Water Wall',
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Colors.blue.shade800,
+          ),
+        ),
+      ),
       body: SafeArea(
           child: ListView(
         padding: EdgeInsets.all(24),
@@ -19,6 +33,7 @@ class SettingsPage extends StatelessWidget {
             title: 'General',
             children: <Widget>[
               ActountPage(),
+              HeaderPage(),
               NotificationsPage(),
               buildLogout(),
               buildDeleteActtion(),
@@ -40,6 +55,15 @@ class SettingsPage extends StatelessWidget {
   }
 }
 
+Widget ChangeTheme() => SimpleSettingsTile(
+      title: 'Dark Mode',
+      subtitle: '',
+      leading: IconWidget(
+        icon: Icons.monochrome_photos,
+        color: Colors.deepPurpleAccent,
+      ),
+    );
+
 Widget buildLogout() => SimpleSettingsTile(
       title: 'Logout',
       subtitle: '',
@@ -48,7 +72,7 @@ Widget buildLogout() => SimpleSettingsTile(
     );
 
 Widget buildDeleteActtion() => SimpleSettingsTile(
-      title: 'Logout',
+      title: 'Delete',
       subtitle: '',
       leading: IconWidget(icon: Icons.delete, color: Colors.greenAccent),
       onTap: () => {},

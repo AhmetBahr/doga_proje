@@ -4,6 +4,7 @@ import '../AnyPage/Change_Theme_Button.dart';
 import 'ListOrMaps.dart';
 import 'MainPage.dart';
 
+//                                        ESKİ GÖSTERMELİK PP SAYFASI ARTIK KULLANILMIYOR
 class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
 

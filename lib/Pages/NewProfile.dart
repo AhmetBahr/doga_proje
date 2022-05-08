@@ -33,10 +33,6 @@ class Newprofile extends StatelessWidget {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Color(0xff555555),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {},
-        ),
       ),
       body: Stack(
         alignment: Alignment.center,
@@ -134,7 +130,7 @@ class Newprofile extends StatelessWidget {
           )
         ],
       ),
-    ); // Scaffold
+    );
   }
 }
 

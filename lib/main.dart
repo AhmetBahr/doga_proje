@@ -1,4 +1,5 @@
 import 'package:doga_proje/AddNews/news.form.widget.dart';
+import 'package:doga_proje/settingPage/Page/headerPage.dart';
 import 'package:doga_proje/settingPage/Page/settingspage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -32,10 +33,47 @@ class MyApp extends StatelessWidget {
         create: (context) => ThemeProvider(),
         builder: (context, _) {
           final themeProvider = Provider.of<ThemeProvider>(context);
+          final isDarkMode =
+              Settings.getValue<bool>(HeaderPage.keyDarkMode, true);
 
-          return MaterialApp(
+          return ValueChangeObserver<bool>(
+              cacheKey: HeaderPage.keyDarkMode,
+              defaultValue: true,
+              builder: (_, isDarkMode, __) => MaterialApp(
+                      title: 'Water_Wall',
+                      home: MyBottomBar(),
+                      themeMode: themeProvider.themeMode,
+                      theme: isDarkMode
+                          ? ThemeData.dark().copyWith(
+                              primaryColor: Colors.teal,
+                              accentColor: Colors.white,
+                              scaffoldBackgroundColor: Colors.amber.shade900,
+                              canvasColor: Color(390443))
+                          : ThemeData.light().copyWith(
+                              primaryColor: Colors.teal,
+                              accentColor: Colors.white,
+                              scaffoldBackgroundColor: Colors.white,
+                              canvasColor: Colors.white),
+                      initialRoute: "/",
+                      routes: {
+                        "/SheetsApi": (context) => SheetsPage(),
+                        "/News1": (context) => News1(),
+                        "/News2": (context) => News2(),
+                        "/AddPages": (context) => AddPages(),
+                        "/NewsPage": (context) =>
+                            NewsFormWidget(onSavedHaberr: onSavedHaberr),
+                        "/settings": (context) => SettingsPage(),
+                      }));
+        },
+      );
+}
+
+
+/*
+
+ return MaterialApp(
               title: 'Water_Wall',
-              home: MyBottomBar(),
+              home: SettingsPage(),
               themeMode: themeProvider.themeMode,
               theme: Mythemes.lightTheme,
               darkTheme: Mythemes.darkTheme,
@@ -49,6 +87,5 @@ class MyApp extends StatelessWidget {
                     NewsFormWidget(onSavedHaberr: onSavedHaberr),
                 "/settings": (context) => SettingsPage(),
               });
-        },
-      );
-}
+
+              */
