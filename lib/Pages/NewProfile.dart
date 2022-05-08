@@ -1,6 +1,5 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
+import 'package:doga_proje/settingPage/Page/settingspage.dart';
 
 class Newprofile extends StatelessWidget {
   const Newprofile({Key? key}) : super(key: key);
@@ -35,7 +34,9 @@ class Newprofile extends StatelessWidget {
         backgroundColor: Color(0xff555555),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, "/AddPages");
+          },
         ),
       ),
       body: Stack(
@@ -57,11 +58,14 @@ class Newprofile extends StatelessWidget {
                       textfield(hintText: "??"),
 
                       //Alttaki "Settings" butonu
-                      Container(
+                      /*Container(
                         height: 55,
                         width: double.infinity,
-                        child: RaisedButton(
-                          onPressed: () {}, // Ayarler sayfasına gidicek
+                        child: FlatButton(
+                          //HATA BURDA
+                          onPressed: () {
+                            Navigator.pushNamed(context, "/Settings");
+                          },
                           color: Colors.black54,
                           child: Center(
                             child: Text(
@@ -73,6 +77,20 @@ class Newprofile extends StatelessWidget {
                             ),
                           ),
                         ),
+                      )*/
+                      ButtonBar(
+                        alignment: MainAxisAlignment.center,
+                        children: [
+                          FlatButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, "/News1");
+                            },
+                            child: const Text(
+                              'Settings',
+                              style: TextStyle(fontSize: 18),
+                            ),
+                          ),
+                        ],
                       )
                     ]),
               )

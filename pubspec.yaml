@@ -38,7 +38,11 @@ dependencies:
   app_settings: ^4.1.1
   request_permission: ^2.1.4
   path_provider: ^2.0.9
+<<<<<<< HEAD
   mobx: ^2.0.7
+=======
+  flutter_settings_screens: ^0.3.2-null-safety
+>>>>>>> master
 
 provider: ^4.3.2+3
 
@@ -51,10 +55,9 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^1.0.0
-
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
+  
+  # For information on the generic Dart part of this file, see the
+  # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter.
 flutter:

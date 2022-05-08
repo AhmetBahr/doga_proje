@@ -18,6 +18,7 @@ class _MyBottomBarState extends State<MyBottomBar> {
     ListOrMap(),
     MainPage(),
     Newprofile(),
+    //Profile(),
   ];
   @override
   Widget build(BuildContext context) {
