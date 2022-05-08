@@ -47,8 +47,9 @@ class MyApp extends StatelessWidget {
                           ? ThemeData.dark().copyWith(
                               primaryColor: Colors.teal,
                               accentColor: Colors.white,
-                              scaffoldBackgroundColor: Colors.amber.shade900,
-                              canvasColor: Color(390443))
+                              scaffoldBackgroundColor:
+                                  Color.fromARGB(0, 5, 18, 28),
+                              canvasColor: Color.fromARGB(0, 5, 18, 28))
                           : ThemeData.light().copyWith(
                               primaryColor: Colors.teal,
                               accentColor: Colors.white,
@@ -62,7 +63,7 @@ class MyApp extends StatelessWidget {
                         "/AddPages": (context) => AddPages(),
                         "/NewsPage": (context) =>
                             NewsFormWidget(onSavedHaberr: onSavedHaberr),
-                        "/settings": (context) => SettingsPage(),
+                        "/Settings": (context) => SettingsPage(),
                       }));
         },
       );
