@@ -192,7 +192,7 @@ Widget news2(context) => Card(
             children: [
               FlatButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, "/News2");
+                  Navigator.pushNamed(context, "/Settings");
                 },
                 child: const Text(
                   'Detay',
