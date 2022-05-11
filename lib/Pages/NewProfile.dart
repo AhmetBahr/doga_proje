@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:doga_proje/settingPage/Page/settingspage.dart';
 
-class Newprofile extends StatelessWidget {
+class Newprofile extends StatefulWidget {
   const Newprofile({Key? key}) : super(key: key);
 
+  @override
+  State<Newprofile> createState() => _NewprofileState();
+}
+
+class _NewprofileState extends State<Newprofile> {
   Widget textfield({required String hintText}) {
     return Material(
       elevation: 4,
@@ -35,74 +40,12 @@ class Newprofile extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pushNamed(context, "/AddPages");
+            Navigator.pushNamed(context, "/Settings");
           },
         ),
       ),
-      body: Stack(
-        alignment: Alignment.center,
+      body: ListView(
         children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Container(
-                height: 350,
-                width: double.infinity,
-                margin: EdgeInsets.symmetric(horizontal: 10),
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      textfield(hintText: "UserName: "),
-                      textfield(hintText: "Konum: "),
-                      textfield(hintText: "Eposta: "),
-                      textfield(hintText: "??"),
-
-                      //Alttaki "Settings" butonu
-                      /*Container(
-                        height: 55,
-                        width: double.infinity,
-                        child: FlatButton(
-                          //HATA BURDA
-                          onPressed: () {
-                            Navigator.pushNamed(context, "/Settings");
-                          },
-                          color: Colors.black54,
-                          child: Center(
-                            child: Text(
-                              "Settings",
-                              style: TextStyle(
-                                fontSize: 23,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        ),
-                      )*/
-                      ButtonBar(
-                        alignment: MainAxisAlignment.center,
-                        children: [
-                          FlatButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, "/News1");
-                            },
-                            child: const Text(
-                              'Settings',
-                              style: TextStyle(fontSize: 18),
-                            ),
-                          ),
-                        ],
-                      )
-                    ]),
-              )
-            ],
-          ),
-          CustomPaint(
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height,
-            ),
-            painter: headerCurvedContainer(),
-          ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -119,11 +62,11 @@ class Newprofile extends StatelessWidget {
               ),
               //Yuvarlak
               Container(
-                padding: EdgeInsets.all(10.0),
+                //  padding: EdgeInsets.all(50.0),
                 width: MediaQuery.of(context).size.width / 2,
                 height: MediaQuery.of(context).size.width / 2,
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white, width: 5),
+                  border: Border.all(color: Colors.white, width: 50),
                   shape: BoxShape.circle,
                   color: Colors.white,
                   /*image: DecorationImage(
@@ -134,25 +77,42 @@ class Newprofile extends StatelessWidget {
               ),
             ],
           ),
-          Padding(
-            padding: EdgeInsets.only(bottom: 270, left: 184),
-            child: CircleAvatar(
-              backgroundColor: Colors.black,
-              child: IconButton(
-                icon: Icon(
-                  Icons.edit,
-                  color: Colors.white,
-                ),
-                onPressed: () {},
+          Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Container(
+                padding: EdgeInsets.all(5),
+                width: double.infinity,
+                margin: EdgeInsets.symmetric(horizontal: 10),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      textfield(hintText: "UserName: "),
+                      bosluk(context),
+                      textfield(hintText: "Konum: "),
+                      bosluk(context),
+                      textfield(hintText: "Eposta: "),
+                      bosluk(context),
+                      textfield(hintText: "??"),
+                      bosluk(context),
+                      BT1(context),
+                    ]),
               ),
+            ],
+          ),
+          /*CustomPaint(
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
             ),
-          )
+            painter: headerCurvedContainer(),
+          ),*/
         ],
       ),
     ); // Scaffold
   }
 }
-
+/*
 class headerCurvedContainer extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
@@ -167,4 +127,31 @@ class headerCurvedContainer extends CustomPainter {
 
   @override
   bool shouldRepaint(CustomPainter oldDelegate) => false;
-}
+}*/
+
+Widget BT1(BuildContext context) => Card(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      color: Colors.grey.shade800,
+      child: Column(
+        children: [
+          ButtonBar(
+            alignment: MainAxisAlignment.center,
+            children: [
+              FlatButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, "/Settings");
+                },
+                child: const Text(
+                  'Settings',
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+
+Widget bosluk(BuildContext context) => Card(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+    );

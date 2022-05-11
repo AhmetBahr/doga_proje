@@ -27,71 +27,70 @@ class ActountPage extends StatelessWidget {
           ],
         ),
       );
-}
 
-Widget buildLangue() {
-  var keyLanguage = 'key-language';
-  return DropDownSettingsTile(
-    title: 'Language',
-    settingKey: keyLanguage,
-    selected: 1,
-    values: <int, String>{
-      1: '1',
-      2: '2',
-      3: '3',
-      4: '4',
-    },
-    onChange: (language) {},
-  );
-}
-
-Widget buildLocation() {
-  var keyLocation = 'key-locatino';
-  return TextInputSettingsTile(
-    title: 'Location',
-    settingKey: keyLocation,
-    initialValue: 'Australian',
-    onChange: (location) {},
-  );
-}
-
-Widget buildPassword() {
-  var keyPassword = 'key-password';
-  return TextInputSettingsTile(
-    title: 'Password',
-    settingKey: keyPassword,
-    obscureText: true,
-    validator: (password) =>
-        password != null && password.length >= 6 ? null : 'Enter 6 characters',
-  );
-}
-
-Widget buildPrivacy(BuildContext context) => SimpleSettingsTile(
-      title: 'Privacy',
-      subtitle: '',
-      leading: IconWidget(
-        icon: Icons.lock,
-        color: Colors.green,
-      ),
-      onTap: () => {},
+  Widget buildLangue() {
+    return DropDownSettingsTile(
+      title: 'Language',
+      settingKey: keyLanguage,
+      selected: 1,
+      values: <int, String>{
+        1: '1',
+        2: '2',
+        3: '3',
+        4: '4',
+      },
+      onChange: (language) {},
     );
+  }
 
-Widget buildSecurity(BuildContext context) => SimpleSettingsTile(
-      title: 'Privacy',
-      subtitle: '',
-      leading: IconWidget(
-        icon: Icons.security,
-        color: Colors.red,
-      ),
-      onTap: () => {},
+  Widget buildLocation() {
+    var keyLocation = 'key-locatino';
+    return TextInputSettingsTile(
+      title: 'Location',
+      settingKey: keyLocation,
+      initialValue: 'Australian',
+      onChange: (location) {},
     );
+  }
 
-Widget buildAccountInfo(BuildContext context) => SimpleSettingsTile(
-      title: 'Privacy',
-      subtitle: '',
-      leading: IconWidget(
-        icon: Icons.text_snippet,
-        color: Colors.purple,
-      ),
-      onTap: () => {},
+  Widget buildPassword() {
+    return TextInputSettingsTile(
+      title: 'Password',
+      settingKey: keyPassword,
+      obscureText: true,
+      validator: (password) => password != null && password.length >= 6
+          ? null
+          : 'Enter 6 characters',
     );
+  }
+
+  Widget buildPrivacy(BuildContext context) => SimpleSettingsTile(
+        title: 'Privacy',
+        subtitle: '',
+        leading: IconWidget(
+          icon: Icons.lock,
+          color: Colors.green,
+        ),
+        onTap: () => {},
+      );
+
+  Widget buildSecurity(BuildContext context) => SimpleSettingsTile(
+        title: 'Privacy',
+        subtitle: '',
+        leading: IconWidget(
+          icon: Icons.security,
+          color: Colors.red,
+        ),
+        onTap: () => {},
+      );
+
+  Widget buildAccountInfo(BuildContext context) => SimpleSettingsTile(
+        title: 'Privacy',
+        subtitle: '',
+        leading: IconWidget(
+          icon: Icons.text_snippet,
+          color: Colors.purple,
+        ),
+        onTap: () => {},
+      );
+}
