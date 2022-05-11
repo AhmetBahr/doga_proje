@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
               defaultValue: true,
               builder: (_, isDarkMode, __) => MaterialApp(
                       title: 'Water_Wall',
-                      home: MyBottomBar(),
+                      home: GoogleHomePage(),
                       themeMode: themeProvider.themeMode,
                       theme: isDarkMode
                           ? ThemeData.dark().copyWith(
