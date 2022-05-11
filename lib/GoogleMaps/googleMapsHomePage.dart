@@ -1,5 +1,5 @@
 import 'dart:async';
-/*
+
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -24,14 +24,14 @@ class googleMapsHomePage extends State<GoogleHomePage> {
       appBar: AppBar(
         leading: IconButton(
           // icon: Icon(FontAwesomeIcon.arrowLeft),
-          icon: Icon(Icons.point_of_sale),
+          icon: Icon(Icons.arrow_left),
           onPressed: () {},
         ),
         title: Text("New York"),
         actions: <Widget>[
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.point_of_sale),
+            icon: Icon(Icons.search),
             // icon: Icon(FontAwesomeIcon.arrowLeft),
           ),
         ],
@@ -59,6 +59,7 @@ Widget _googlemap(BuildContext context) {
       },
       markers: {
         mark1,
+        mark2,
       },
     ),
   );
@@ -66,8 +67,14 @@ Widget _googlemap(BuildContext context) {
 
 Marker mark1 = Marker(
   markerId: MarkerId('mark1'),
-  position: LatLng(40.7, -74.00),
-  infoWindow: InfoWindow(title: 'Los Tac'),
+  position: LatLng(40.742451, -74.005959),
+  infoWindow: InfoWindow(title: 'Bahar was here'),
   icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
 );
-*/
+
+Marker mark2 = Marker(
+  markerId: MarkerId('mark1'),
+  position: LatLng(40.729640, -73.983510),
+  infoWindow: InfoWindow(title: 'Sirey is here'),
+  icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
+);
